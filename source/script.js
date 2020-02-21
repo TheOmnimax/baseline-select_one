@@ -53,3 +53,14 @@ if ( fieldProperties.APPEARANCE.includes("minimal") == true ) {
     
   }
 } 
+
+// likert appearance
+if ( fieldProperties.APPEARANCE.includes("likert") == true ) {
+  // find the likert container element
+  var likertContainer = document.getElementById("likert-container");
+  // hide the default radio buttons
+  document.getElementById("radio-buttons-container").style.display = "none";
+  // show the likert container
+  likertContainer.style.display = "flex";
+
+}

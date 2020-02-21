@@ -55,6 +55,28 @@
   {{/CHOICES}}
 </select>
 
+<!-- This is what will be shown if the field has the 'likert' appearance -->
+<div class="likert-choices-container" id="likert-container">
+  {{#CHOICES}}
+  <div class="likert-choice-container">
+    <input 
+      type="radio" 
+      value="{{CHOICE_VALUE}}" 
+      name="opt" 
+      class="likert-choice-input"
+      id="{{CHOICE_INDEX}}"
+      {{#CHOICE_SELECTED}}checked="checked"{{/CHOICE_SELECTED}} 
+    />
+    <label class="likert-choice-label" for="{{CHOICE_INDEX}}">
+      <div class="likert-choice-label-text default-answer-text-size">
+        {{CHOICE_LABEL}}
+      </div>
+      <!-- if there's a choice image, show that image-->
+      {{#CHOICE_IMAGE}}<img src="{{CHOICE_IMAGE}}" class="likert-choice-label-image" />{{/CHOICE_IMAGE}}
+    </label>
+  </div>
+  {{/CHOICES}}
+</div>
 
 <!-- You can define svg icons here that you want to use in the rest of the template. In this case, the icon here is what will be used for the 'quick' appearance. -->
 <svg class="symbol">

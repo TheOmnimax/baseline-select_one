@@ -117,6 +117,60 @@
     border: 1px solid #2EA3CF;
 }
 
+/* 'likert' appearance */
+#likert-container {
+    display: none;
+    width: 100%;
+}
+.likert-choice-container {
+    display: flex;
+    flex: 1 1 1px;
+    flex-direction: column;
+    align-items: center;
+}
+.likert-input-button-container {
+    width: 100%;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+.likert-input-button-container:before {
+    content: '';
+    display: block;
+    z-index: -1;
+    position: relative;
+    top: calc(50% + 2px);
+    height: 4px;
+    width: 100%;
+}
+.likert-choice-container:first-of-type .likert-input-button-container:before {
+    width: 50%;
+    left: 50%;
+}
+.likert-choice-container:last-of-type .likert-input-button-container:before {
+    width: 50%;
+}
+.likert-choice-label {
+    text-align: center;
+}
+.likert-choice-label * {
+    margin: 1rem;
+}
+.likert-choice-label-image {
+    max-width: 80%;
+}
+
+/* there are some differences between the likert appearance on web vs Android/iOS Collect */
+.web-collect .likert-choice-label-text {
+    font-weight: bold;
+}
+.web-collect .likert-input-button-container:before {
+    background-color: #efefef;
+}
+.android-collect .likert-input-button-container:before,
+.ios-collect .likert-input-button-container:before {
+    background-color: rgba(0,0,0,.5);
+}
+
 /*
     Other global styles
     ------------------------
