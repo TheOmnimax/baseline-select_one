@@ -138,8 +138,9 @@
     display: block;
     z-index: -1;
     position: relative;
-    top: calc(50% + 2px);
-    height: 4px;
+    top: .4rem;
+    height: .2rem;
+    margin-bottom: -.2rem;
     width: 100%;
 }
 .likert-choice-container:first-of-type .likert-input-button-container:before {
@@ -148,6 +149,24 @@
 }
 .likert-choice-container:last-of-type .likert-input-button-container:before {
     width: 50%;
+}
+.likert-input-button {
+    width: 1rem;
+    height: 1rem;
+    margin: 0 auto;
+    border-radius: 1rem;
+    background-color: white;
+    border: 1px solid rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.likert-input-selected {
+    width: .8rem;
+    height: .8rem;
+    border-radius: .4rem;
+    background-color: #2EA3CF;
+    margin: 0;
 }
 .likert-choice-label {
     text-align: center;

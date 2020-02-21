@@ -56,11 +56,20 @@ if ( fieldProperties.APPEARANCE.includes("minimal") == true ) {
 
 // likert appearance
 if ( fieldProperties.APPEARANCE.includes("likert") == true ) {
-  // find the likert container element
   var likertContainer = document.getElementById("likert-container");
+  var likertButtons = document.querySelectorAll('div[name="opt"]');
   // hide the default radio buttons
   document.getElementById("radio-buttons-container").style.display = "none";
   // show the likert container
   likertContainer.style.display = "flex";
+
+  // what to do when an option is clicked
+  function likertChange() {
+    setAnswer(this.value);
+    console.log("a button was clicked. the value was: " + this.value );
+  }
+  for(var i = 0; i < likertButtons.length; i++){
+    likertButtons[i].onclick = likertChange;
+  }
 
 }
